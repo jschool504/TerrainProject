@@ -1,0 +1,297 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F098FB815486B420072E4B8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F098FB715486B420072E4B8 /* Cocoa.framework */; };
+		3F098FC215486B420072E4B8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F098FC015486B420072E4B8 /* InfoPlist.strings */; };
+		3F098FC415486B420072E4B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F098FC315486B420072E4B8 /* main.m */; };
+		3F098FC815486B420072E4B8 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3F098FC615486B420072E4B8 /* Credits.rtf */; };
+		3F098FCB15486B420072E4B8 /* TPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F098FCA15486B420072E4B8 /* TPAppDelegate.m */; };
+		3F098FCE15486B430072E4B8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F098FCC15486B430072E4B8 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3F098FB315486B420072E4B8 /* TerrainProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TerrainProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F098FB715486B420072E4B8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		3F098FBA15486B420072E4B8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		3F098FBB15486B420072E4B8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3F098FBC15486B420072E4B8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3F098FBF15486B420072E4B8 /* TerrainProject-Info.plist */ = {isa = PBXFileReference; path = "TerrainProject-Info.plist"; sourceTree = "<group>"; };
+		3F098FC115486B420072E4B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3F098FC315486B420072E4B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3F098FC515486B420072E4B8 /* TerrainProject-Prefix.pch */ = {isa = PBXFileReference; path = "TerrainProject-Prefix.pch"; sourceTree = "<group>"; };
+		3F098FC715486B420072E4B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		3F098FC915486B420072E4B8 /* TPAppDelegate.h */ = {isa = PBXFileReference; path = TPAppDelegate.h; sourceTree = "<group>"; };
+		3F098FCA15486B420072E4B8 /* TPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPAppDelegate.m; sourceTree = "<group>"; };
+		3F098FCD15486B430072E4B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F098FB015486B420072E4B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F098FB815486B420072E4B8 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F098FA815486B420072E4B8 = {
+			isa = PBXGroup;
+			children = (
+				3F098FBD15486B420072E4B8 /* TerrainProject */,
+				3F098FB615486B420072E4B8 /* Frameworks */,
+				3F098FB415486B420072E4B8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3F098FB415486B420072E4B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F098FB315486B420072E4B8 /* TerrainProject.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F098FB615486B420072E4B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F098FB715486B420072E4B8 /* Cocoa.framework */,
+				3F098FB915486B420072E4B8 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3F098FB915486B420072E4B8 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F098FBA15486B420072E4B8 /* AppKit.framework */,
+				3F098FBB15486B420072E4B8 /* CoreData.framework */,
+				3F098FBC15486B420072E4B8 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		3F098FBD15486B420072E4B8 /* TerrainProject */ = {
+			isa = PBXGroup;
+			children = (
+				3F098FC915486B420072E4B8 /* TPAppDelegate.h */,
+				3F098FCA15486B420072E4B8 /* TPAppDelegate.m */,
+				3F098FCC15486B430072E4B8 /* MainMenu.xib */,
+				3F098FBE15486B420072E4B8 /* Supporting Files */,
+			);
+			path = TerrainProject;
+			sourceTree = "<group>";
+		};
+		3F098FBE15486B420072E4B8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3F098FBF15486B420072E4B8 /* TerrainProject-Info.plist */,
+				3F098FC015486B420072E4B8 /* InfoPlist.strings */,
+				3F098FC315486B420072E4B8 /* main.m */,
+				3F098FC515486B420072E4B8 /* TerrainProject-Prefix.pch */,
+				3F098FC615486B420072E4B8 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F098FB215486B420072E4B8 /* TerrainProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F098FD115486B430072E4B8 /* Build configuration list for PBXNativeTarget "TerrainProject" */;
+			buildPhases = (
+				3F098FAF15486B420072E4B8 /* Sources */,
+				3F098FB015486B420072E4B8 /* Frameworks */,
+				3F098FB115486B420072E4B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TerrainProject;
+			productName = TerrainProject;
+			productReference = 3F098FB315486B420072E4B8 /* TerrainProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F098FAA15486B420072E4B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TP;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = Home;
+			};
+			buildConfigurationList = 3F098FAD15486B420072E4B8 /* Build configuration list for PBXProject "TerrainProject" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3F098FA815486B420072E4B8;
+			productRefGroup = 3F098FB415486B420072E4B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F098FB215486B420072E4B8 /* TerrainProject */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F098FB115486B420072E4B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F098FC215486B420072E4B8 /* InfoPlist.strings in Resources */,
+				3F098FC815486B420072E4B8 /* Credits.rtf in Resources */,
+				3F098FCE15486B430072E4B8 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F098FAF15486B420072E4B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F098FC415486B420072E4B8 /* main.m in Sources */,
+				3F098FCB15486B420072E4B8 /* TPAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3F098FC015486B420072E4B8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F098FC115486B420072E4B8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3F098FC615486B420072E4B8 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F098FC715486B420072E4B8 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		3F098FCC15486B430072E4B8 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F098FCD15486B430072E4B8 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3F098FCF15486B430072E4B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3F098FD015486B430072E4B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3F098FD215486B430072E4B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TerrainProject/TerrainProject-Prefix.pch";
+				INFOPLIST_FILE = "TerrainProject/TerrainProject-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3F098FD315486B430072E4B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TerrainProject/TerrainProject-Prefix.pch";
+				INFOPLIST_FILE = "TerrainProject/TerrainProject-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F098FAD15486B420072E4B8 /* Build configuration list for PBXProject "TerrainProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F098FCF15486B430072E4B8 /* Debug */,
+				3F098FD015486B430072E4B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F098FD115486B430072E4B8 /* Build configuration list for PBXNativeTarget "TerrainProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F098FD215486B430072E4B8 /* Debug */,
+				3F098FD315486B430072E4B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F098FAA15486B420072E4B8 /* Project object */;
+}
