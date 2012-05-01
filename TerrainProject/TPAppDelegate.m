@@ -12,9 +12,9 @@
 
 @synthesize window = _window;
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-	// Insert code here to initialize your application
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+	NSView *contentView = self.window.contentView;
+	self.window.contentView = [[TPOpenGLView alloc] initWithFrame:[self.window.contentView frame] delegate:[[TPSceneRenderer alloc] initWithScale:contentView.bounds.size.width / 2]];
 }
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "TPOpenGLView.h"
+#import "TPSceneRenderer.h"
 
 @interface TPAppDelegate : NSObject <NSApplicationDelegate>
 
