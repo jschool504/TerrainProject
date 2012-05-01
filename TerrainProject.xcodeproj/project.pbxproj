@@ -167,10 +167,10 @@
 		3FEAC691154EF0D9007D3579 /* Atomsphere */ = {
 			isa = PBXGroup;
 			children = (
-				3FEAC698154EF255007D3579 /* ATTypes.h */,
-				3F5266D3154F7507005FF24A /* ATTypes.c */,
 				3FEAC695154EF134007D3579 /* Atmosphere.h */,
 				3FEAC699154EF5FD007D3579 /* Atmosphere.c */,
+				3FEAC698154EF255007D3579 /* ATTypes.h */,
+				3F5266D3154F7507005FF24A /* ATTypes.c */,
 				3F5266D5154F875E005FF24A /* AtmosphereDebug.c */,
 			);
 			name = Atomsphere;

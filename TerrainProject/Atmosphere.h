@@ -31,6 +31,10 @@ void draw_rect(ATRect rect, ATColor rectColor);
 int do_button(int id, ATRect buttonRect, ATUIState *uistate);
 
 // Debugging Functions
-void print_state(ATUIState *uistate);
+void print_state(ATUIState uistate);
+void print_point(ATPoint point);
+void print_size(ATSize size);
+void print_rect(ATRect rect);
+void print_color(ATColor color);
 
 #endif

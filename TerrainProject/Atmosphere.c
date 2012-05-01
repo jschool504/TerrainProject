@@ -40,7 +40,6 @@ void atmosphere_init(ATUIState *uistate) {
 
 void atmosphere_start(ATUIState *uistate) {
 	uistate->hotId = 0;
-	printf("%f, %f\n", uistate->mousePoint.x, uistate->mousePoint.y);
 }
 
 void atmosphere_finish(ATUIState *uistate) {
