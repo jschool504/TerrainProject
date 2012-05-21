@@ -14,19 +14,33 @@
 		3F098FCB15486B420072E4B8 /* TPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F098FCA15486B420072E4B8 /* TPAppDelegate.m */; };
 		3F098FCE15486B430072E4B8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F098FCC15486B430072E4B8 /* MainMenu.xib */; };
 		3F098FD615486B6F0072E4B8 /* TPOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F098FD515486B6F0072E4B8 /* TPOpenGLView.m */; };
-		3F098FD915486C010072E4B8 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F098FD715486C010072E4B8 /* GLUT.framework */; };
 		3F098FDA15486C010072E4B8 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F098FD815486C010072E4B8 /* OpenGL.framework */; };
-		3F5266D4154F7507005FF24A /* ATTypes.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F5266D3154F7507005FF24A /* ATTypes.c */; };
-		3F5266D6154F875F005FF24A /* AtmosphereDebug.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F5266D5154F875E005FF24A /* AtmosphereDebug.c */; };
+		3F0C1F7D1552D9CD0091CFB7 /* AtmosphereProjection.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C1F7C1552D9CD0091CFB7 /* AtmosphereProjection.c */; };
+		3F2C91CD15541AE2001CEB81 /* metal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F2C91CC15541AE2001CEB81 /* metal.png */; };
+		3F2C91D01554258C001CEB81 /* ATPoint.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F2C91CF1554258C001CEB81 /* ATPoint.c */; };
+		3F2C91D3155427E7001CEB81 /* ATPolygon.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F2C91D2155427E7001CEB81 /* ATPolygon.c */; };
+		3F2C91D615542882001CEB81 /* ATVertex.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F2C91D515542882001CEB81 /* ATVertex.c */; };
+		3F2C91D915542988001CEB81 /* ATSize.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F2C91D815542988001CEB81 /* ATSize.c */; };
+		3F2C91DC15542A55001CEB81 /* ATTexture.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F2C91DB15542A54001CEB81 /* ATTexture.c */; };
+		3F2C91DF15542B50001CEB81 /* ATColor.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F2C91DE15542B50001CEB81 /* ATColor.c */; };
+		3F36920B1563EE79007DBD4F /* NSArray+TwoD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F36920A1563EE79007DBD4F /* NSArray+TwoD.m */; };
+		3F36920D15640B56007DBD4F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F36920C15640B56007DBD4F /* QuartzCore.framework */; };
+		3F9108E81555D701003AB9F6 /* ATTexturedPolygon.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F9108E71555D701003AB9F6 /* ATTexturedPolygon.c */; };
 		3F95FD6D154B172E007D5BCC /* NSImage+OpenGLTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F95FD6C154B172E007D5BCC /* NSImage+OpenGLTexture.m */; };
 		3F95FD71154B24C0007D5BCC /* gridTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F95FD70154B24C0007D5BCC /* gridTexture.png */; };
+		3F962E5E155AE9CF00090190 /* NSImage+Saving.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F962E5D155AE9CE00090190 /* NSImage+Saving.m */; };
+		3F962E69155C006100090190 /* TPString.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F962E68155C006000090190 /* TPString.m */; };
+		3F962E6C155C1ECD00090190 /* ATRotation.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F962E6B155C1ECB00090190 /* ATRotation.c */; };
+		3F962E6F155CB1B400090190 /* ATCamera.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F962E6E155CB1B300090190 /* ATCamera.c */; };
+		3F962E72155CB24B00090190 /* ATVector.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F962E71155CB24A00090190 /* ATVector.c */; };
 		3F980AA1154891CF005EDE60 /* TPSceneRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F980AA0154891CF005EDE60 /* TPSceneRenderer.m */; };
 		3F980AAA154893FA005EDE60 /* TPAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F980AA9154893FA005EDE60 /* TPAxis.m */; };
 		3F980AC3154A3591005EDE60 /* TPTerrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F980AC2154A3591005EDE60 /* TPTerrain.m */; };
 		3F980AC6154A3823005EDE60 /* TPChunk.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F980AC5154A3822005EDE60 /* TPChunk.m */; };
-		3F980ACC154AE8DA005EDE60 /* heightmap.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F980ACB154AE8D9005EDE60 /* heightmap.png */; };
 		3F980AD9154AFB2A005EDE60 /* JSVertex.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F980AD8154AFB29005EDE60 /* JSVertex.m */; };
-		3FEAC69A154EF5FD007D3579 /* Atmosphere.c in Sources */ = {isa = PBXBuildFile; fileRef = 3FEAC699154EF5FD007D3579 /* Atmosphere.c */; };
+		3F9CC0011569DC590057A97A /* sine.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 3F9CC0001569DC590057A97A /* sine.tiff */; };
+		3FAE6A8E15688E4E00917C65 /* TPTerrainGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE6A8D15688E4E00917C65 /* TPTerrainGenerator.m */; };
+		3FE68ACD1565EA6F0095500C /* grass.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FE68ACC1565EA6F0095500C /* grass.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,13 +59,40 @@
 		3F098FCD15486B430072E4B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		3F098FD415486B6F0072E4B8 /* TPOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOpenGLView.h; sourceTree = "<group>"; };
 		3F098FD515486B6F0072E4B8 /* TPOpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOpenGLView.m; sourceTree = "<group>"; };
-		3F098FD715486C010072E4B8 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		3F098FD815486C010072E4B8 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		3F5266D3154F7507005FF24A /* ATTypes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ATTypes.c; sourceTree = "<group>"; };
-		3F5266D5154F875E005FF24A /* AtmosphereDebug.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AtmosphereDebug.c; sourceTree = "<group>"; };
+		3F0C1F7C1552D9CD0091CFB7 /* AtmosphereProjection.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AtmosphereProjection.c; sourceTree = "<group>"; };
+		3F2C91CC15541AE2001CEB81 /* metal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = metal.png; sourceTree = "<group>"; };
+		3F2C91CE15542518001CEB81 /* ATPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATPoint.h; sourceTree = "<group>"; };
+		3F2C91CF1554258C001CEB81 /* ATPoint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ATPoint.c; sourceTree = "<group>"; };
+		3F2C91D11554277D001CEB81 /* ATPolygon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATPolygon.h; sourceTree = "<group>"; };
+		3F2C91D2155427E7001CEB81 /* ATPolygon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ATPolygon.c; sourceTree = "<group>"; };
+		3F2C91D41554284C001CEB81 /* ATVertex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATVertex.h; sourceTree = "<group>"; };
+		3F2C91D515542882001CEB81 /* ATVertex.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ATVertex.c; sourceTree = "<group>"; };
+		3F2C91D715542958001CEB81 /* ATSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATSize.h; sourceTree = "<group>"; };
+		3F2C91D815542988001CEB81 /* ATSize.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ATSize.c; sourceTree = "<group>"; };
+		3F2C91DA15542A18001CEB81 /* ATTexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATTexture.h; sourceTree = "<group>"; };
+		3F2C91DB15542A54001CEB81 /* ATTexture.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ATTexture.c; sourceTree = "<group>"; };
+		3F2C91DD15542AFF001CEB81 /* ATColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATColor.h; sourceTree = "<group>"; };
+		3F2C91DE15542B50001CEB81 /* ATColor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ATColor.c; sourceTree = "<group>"; };
+		3F2C91E015543323001CEB81 /* ATTexturedPolygon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATTexturedPolygon.h; sourceTree = "<group>"; };
+		3F2C91E215543960001CEB81 /* AtmosphereProjection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AtmosphereProjection.h; sourceTree = "<group>"; };
+		3F3692091563EE79007DBD4F /* NSArray+TwoD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+TwoD.h"; sourceTree = "<group>"; };
+		3F36920A1563EE79007DBD4F /* NSArray+TwoD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+TwoD.m"; sourceTree = "<group>"; };
+		3F36920C15640B56007DBD4F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3F9108E71555D701003AB9F6 /* ATTexturedPolygon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ATTexturedPolygon.c; sourceTree = "<group>"; };
 		3F95FD6B154B172D007D5BCC /* NSImage+OpenGLTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+OpenGLTexture.h"; sourceTree = "<group>"; };
 		3F95FD6C154B172E007D5BCC /* NSImage+OpenGLTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+OpenGLTexture.m"; sourceTree = "<group>"; };
 		3F95FD70154B24C0007D5BCC /* gridTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gridTexture.png; sourceTree = "<group>"; };
+		3F962E5C155AE9CD00090190 /* NSImage+Saving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Saving.h"; sourceTree = "<group>"; };
+		3F962E5D155AE9CE00090190 /* NSImage+Saving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Saving.m"; sourceTree = "<group>"; };
+		3F962E67155C006000090190 /* TPString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPString.h; sourceTree = "<group>"; };
+		3F962E68155C006000090190 /* TPString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPString.m; sourceTree = "<group>"; };
+		3F962E6A155C1E3A00090190 /* ATRotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATRotation.h; sourceTree = "<group>"; };
+		3F962E6B155C1ECB00090190 /* ATRotation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ATRotation.c; sourceTree = "<group>"; };
+		3F962E6D155CB19A00090190 /* ATCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATCamera.h; sourceTree = "<group>"; };
+		3F962E6E155CB1B300090190 /* ATCamera.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ATCamera.c; sourceTree = "<group>"; };
+		3F962E70155CB23F00090190 /* ATVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATVector.h; sourceTree = "<group>"; };
+		3F962E71155CB24A00090190 /* ATVector.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ATVector.c; sourceTree = "<group>"; };
 		3F980A9F154891CF005EDE60 /* TPSceneRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPSceneRenderer.h; sourceTree = "<group>"; };
 		3F980AA0154891CF005EDE60 /* TPSceneRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPSceneRenderer.m; sourceTree = "<group>"; };
 		3F980AA8154893FA005EDE60 /* TPAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPAxis.h; sourceTree = "<group>"; };
@@ -61,13 +102,14 @@
 		3F980AC2154A3591005EDE60 /* TPTerrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPTerrain.m; sourceTree = "<group>"; };
 		3F980AC4154A3822005EDE60 /* TPChunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPChunk.h; sourceTree = "<group>"; };
 		3F980AC5154A3822005EDE60 /* TPChunk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPChunk.m; sourceTree = "<group>"; };
-		3F980ACB154AE8D9005EDE60 /* heightmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heightmap.png; sourceTree = "<group>"; };
 		3F980AD6154AF844005EDE60 /* JSColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSColor.h; sourceTree = "<group>"; };
 		3F980AD7154AFB29005EDE60 /* JSVertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSVertex.h; sourceTree = "<group>"; };
 		3F980AD8154AFB29005EDE60 /* JSVertex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSVertex.m; sourceTree = "<group>"; };
-		3FEAC695154EF134007D3579 /* Atmosphere.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Atmosphere.h; sourceTree = "<group>"; };
-		3FEAC698154EF255007D3579 /* ATTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATTypes.h; sourceTree = "<group>"; };
-		3FEAC699154EF5FD007D3579 /* Atmosphere.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Atmosphere.c; sourceTree = "<group>"; };
+		3F9CC0001569DC590057A97A /* sine.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = sine.tiff; sourceTree = "<group>"; };
+		3FAE6A8C15688E4E00917C65 /* TPTerrainGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPTerrainGenerator.h; sourceTree = "<group>"; };
+		3FAE6A8D15688E4E00917C65 /* TPTerrainGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPTerrainGenerator.m; sourceTree = "<group>"; };
+		3FE68ACC1565EA6F0095500C /* grass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grass.jpg; sourceTree = "<group>"; };
+		3FE7AFAA1551C8AB00363533 /* Atmosphere.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Atmosphere.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F098FD915486C010072E4B8 /* GLUT.framework in Frameworks */,
+				3F36920D15640B56007DBD4F /* QuartzCore.framework in Frameworks */,
 				3F098FDA15486C010072E4B8 /* OpenGL.framework in Frameworks */,
 				3F098FB815486B420072E4B8 /* Cocoa.framework in Frameworks */,
 			);
@@ -104,7 +146,7 @@
 		3F098FB615486B420072E4B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3F098FD715486C010072E4B8 /* GLUT.framework */,
+				3F36920C15640B56007DBD4F /* QuartzCore.framework */,
 				3F098FD815486C010072E4B8 /* OpenGL.framework */,
 				3F098FB715486B420072E4B8 /* Cocoa.framework */,
 				3F098FB915486B420072E4B8 /* Other Frameworks */,
@@ -125,11 +167,12 @@
 		3F098FBD15486B420072E4B8 /* TerrainProject */ = {
 			isa = PBXGroup;
 			children = (
-				3FEAC691154EF0D9007D3579 /* Atomsphere */,
+				3FE68ACC1565EA6F0095500C /* grass.jpg */,
+				3F2C91CC15541AE2001CEB81 /* metal.png */,
 				3F95FD70154B24C0007D5BCC /* gridTexture.png */,
-				3F980ACB154AE8D9005EDE60 /* heightmap.png */,
 				3F098FC915486B420072E4B8 /* TPAppDelegate.h */,
 				3F098FCA15486B420072E4B8 /* TPAppDelegate.m */,
+				3F9CC0001569DC590057A97A /* sine.tiff */,
 				3F098FCC15486B430072E4B8 /* MainMenu.xib */,
 				3F098FBE15486B420072E4B8 /* Supporting Files */,
 				3F098FD415486B6F0072E4B8 /* TPOpenGLView.h */,
@@ -143,11 +186,20 @@
 				3F980AC2154A3591005EDE60 /* TPTerrain.m */,
 				3F980AC4154A3822005EDE60 /* TPChunk.h */,
 				3F980AC5154A3822005EDE60 /* TPChunk.m */,
+				3FAE6A8C15688E4E00917C65 /* TPTerrainGenerator.h */,
+				3FAE6A8D15688E4E00917C65 /* TPTerrainGenerator.m */,
 				3F980AD6154AF844005EDE60 /* JSColor.h */,
 				3F980AD7154AFB29005EDE60 /* JSVertex.h */,
 				3F980AD8154AFB29005EDE60 /* JSVertex.m */,
 				3F95FD6B154B172D007D5BCC /* NSImage+OpenGLTexture.h */,
 				3F95FD6C154B172E007D5BCC /* NSImage+OpenGLTexture.m */,
+				3FE7AFAB1551C8B000363533 /* Atmosphere */,
+				3F962E5C155AE9CD00090190 /* NSImage+Saving.h */,
+				3F962E5D155AE9CE00090190 /* NSImage+Saving.m */,
+				3F962E67155C006000090190 /* TPString.h */,
+				3F962E68155C006000090190 /* TPString.m */,
+				3F3692091563EE79007DBD4F /* NSArray+TwoD.h */,
+				3F36920A1563EE79007DBD4F /* NSArray+TwoD.m */,
 			);
 			path = TerrainProject;
 			sourceTree = "<group>";
@@ -164,16 +216,34 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3FEAC691154EF0D9007D3579 /* Atomsphere */ = {
+		3FE7AFAB1551C8B000363533 /* Atmosphere */ = {
 			isa = PBXGroup;
 			children = (
-				3FEAC695154EF134007D3579 /* Atmosphere.h */,
-				3FEAC699154EF5FD007D3579 /* Atmosphere.c */,
-				3FEAC698154EF255007D3579 /* ATTypes.h */,
-				3F5266D3154F7507005FF24A /* ATTypes.c */,
-				3F5266D5154F875E005FF24A /* AtmosphereDebug.c */,
+				3FE7AFAA1551C8AB00363533 /* Atmosphere.h */,
+				3F2C91E215543960001CEB81 /* AtmosphereProjection.h */,
+				3F0C1F7C1552D9CD0091CFB7 /* AtmosphereProjection.c */,
+				3F962E6D155CB19A00090190 /* ATCamera.h */,
+				3F962E6E155CB1B300090190 /* ATCamera.c */,
+				3F2C91CE15542518001CEB81 /* ATPoint.h */,
+				3F2C91CF1554258C001CEB81 /* ATPoint.c */,
+				3F2C91D11554277D001CEB81 /* ATPolygon.h */,
+				3F2C91D2155427E7001CEB81 /* ATPolygon.c */,
+				3F2C91D41554284C001CEB81 /* ATVertex.h */,
+				3F2C91D515542882001CEB81 /* ATVertex.c */,
+				3F2C91D715542958001CEB81 /* ATSize.h */,
+				3F2C91D815542988001CEB81 /* ATSize.c */,
+				3F2C91DA15542A18001CEB81 /* ATTexture.h */,
+				3F2C91DB15542A54001CEB81 /* ATTexture.c */,
+				3F2C91DD15542AFF001CEB81 /* ATColor.h */,
+				3F2C91DE15542B50001CEB81 /* ATColor.c */,
+				3F2C91E015543323001CEB81 /* ATTexturedPolygon.h */,
+				3F9108E71555D701003AB9F6 /* ATTexturedPolygon.c */,
+				3F962E6A155C1E3A00090190 /* ATRotation.h */,
+				3F962E6B155C1ECB00090190 /* ATRotation.c */,
+				3F962E70155CB23F00090190 /* ATVector.h */,
+				3F962E71155CB24A00090190 /* ATVector.c */,
 			);
-			name = Atomsphere;
+			name = Atmosphere;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +301,10 @@
 				3F098FC215486B420072E4B8 /* InfoPlist.strings in Resources */,
 				3F098FC815486B420072E4B8 /* Credits.rtf in Resources */,
 				3F098FCE15486B430072E4B8 /* MainMenu.xib in Resources */,
-				3F980ACC154AE8DA005EDE60 /* heightmap.png in Resources */,
 				3F95FD71154B24C0007D5BCC /* gridTexture.png in Resources */,
+				3F2C91CD15541AE2001CEB81 /* metal.png in Resources */,
+				3FE68ACD1565EA6F0095500C /* grass.jpg in Resources */,
+				3F9CC0011569DC590057A97A /* sine.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,9 +324,21 @@
 				3F980AC6154A3823005EDE60 /* TPChunk.m in Sources */,
 				3F980AD9154AFB2A005EDE60 /* JSVertex.m in Sources */,
 				3F95FD6D154B172E007D5BCC /* NSImage+OpenGLTexture.m in Sources */,
-				3FEAC69A154EF5FD007D3579 /* Atmosphere.c in Sources */,
-				3F5266D4154F7507005FF24A /* ATTypes.c in Sources */,
-				3F5266D6154F875F005FF24A /* AtmosphereDebug.c in Sources */,
+				3F0C1F7D1552D9CD0091CFB7 /* AtmosphereProjection.c in Sources */,
+				3F2C91D01554258C001CEB81 /* ATPoint.c in Sources */,
+				3F2C91D3155427E7001CEB81 /* ATPolygon.c in Sources */,
+				3F2C91D615542882001CEB81 /* ATVertex.c in Sources */,
+				3F2C91D915542988001CEB81 /* ATSize.c in Sources */,
+				3F2C91DC15542A55001CEB81 /* ATTexture.c in Sources */,
+				3F2C91DF15542B50001CEB81 /* ATColor.c in Sources */,
+				3F9108E81555D701003AB9F6 /* ATTexturedPolygon.c in Sources */,
+				3F962E5E155AE9CF00090190 /* NSImage+Saving.m in Sources */,
+				3F962E69155C006100090190 /* TPString.m in Sources */,
+				3F962E6C155C1ECD00090190 /* ATRotation.c in Sources */,
+				3F962E6F155CB1B400090190 /* ATCamera.c in Sources */,
+				3F962E72155CB24B00090190 /* ATVector.c in Sources */,
+				3F36920B1563EE79007DBD4F /* NSArray+TwoD.m in Sources */,
+				3FAE6A8E15688E4E00917C65 /* TPTerrainGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
