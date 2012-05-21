@@ -68,7 +68,7 @@
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	
-	[self.delegate reshape:NSMakeSize(sceneBounds.size.width / startingSize.width, sceneBounds.size.height / startingSize.height)];
+	[self.delegate reshape:sceneBounds.size];
 	
 	
 }
@@ -151,11 +151,11 @@
 // Events -- Keyboard
 
 - (void)keyDown:(NSEvent *)theEvent {
-	NSLog(@"%@", theEvent);
+	[self.delegate keyDown:theEvent];
 }
 
 - (void)keyUp:(NSEvent *)theEvent {
-	NSLog(@"%@", theEvent);
+	
 }
 
 @end

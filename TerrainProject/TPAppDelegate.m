@@ -14,7 +14,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	NSView *contentView = self.window.contentView;
-	self.window.contentView = [[TPOpenGLView alloc] initWithFrame:[self.window.contentView frame] delegate:[[TPSceneRenderer alloc] initWithScale:contentView.bounds.size.width / 2]];
+	self.window.contentView = [[TPOpenGLView alloc] initWithFrame:[self.window.contentView frame] delegate:[[TPSceneRenderer alloc] initWithScale:contentView.bounds.size]];
 }
 
 @end

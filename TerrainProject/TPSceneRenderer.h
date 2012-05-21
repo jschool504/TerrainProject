@@ -7,13 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSImage+OpenGLTexture.h"
+#import "NSImage+Saving.h"
 #import "TPAxis.h"
-#include "Atmosphere.h"
 #import "TPTerrain.h"
 #import "TPOpenGLView.h"
+#import "TPString.h"
+
+#include "Atmosphere.h"
 #include <OpenGL/OpenGL.h>
 #include <OpenGL/glu.h>
 #include <OpenGL/gl.h>
+
+#define MOV_SPEED 5
+#define ROT_SPEED 3
 
 @interface TPSceneRenderer : NSObject <OpenGLSceneRenderer> {
 	int rotation;
@@ -22,12 +29,19 @@
 	
 	TPTerrain *terrain;
 	
-	ATUIState uistate;
+	ATTexturedPolygon polygon;
+	
+	TPString *terrainPointsString;
+	
+	ATCamera camera;
+	ATVertex camLoc;
+	
+	BOOL hasRun;
 }
 
-@property (nonatomic, readwrite) float scale;
+@property (nonatomic, readwrite) NSSize scale;
 
-- (id)initWithScale:(float)scale;
+- (id)initWithScale:(NSSize)scale;
 
 - (void)draw;
 

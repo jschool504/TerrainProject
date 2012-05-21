@@ -11,6 +11,7 @@
 @implementation JSVertex
 
 @synthesize x, y, z, nx, ny, nz, color, tx, ty;
+@synthesize texId = _texId;
 
 //Init methods
 

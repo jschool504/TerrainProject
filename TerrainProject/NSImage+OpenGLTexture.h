@@ -7,12 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "NSImage+Saving.h"
 #include <OpenGL/OpenGL.h>
 #include <OpenGL/glu.h>
 #include <OpenGL/gl.h>
 
 @interface NSImage(OpenGLTexture)
 
-- (GLuint)openGLTextureID;
+- (GLubyte *)glubyteValue;
 
 @end

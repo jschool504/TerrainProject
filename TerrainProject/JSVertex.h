@@ -41,4 +41,7 @@
 @property (nonatomic, readwrite) float tx;
 @property (nonatomic, readwrite) float ty;
 
+//Texture name
+@property (nonatomic, readwrite) GLuint texId;
+
 @end

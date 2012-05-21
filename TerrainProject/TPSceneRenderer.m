@@ -17,16 +17,18 @@
 @implementation TPSceneRenderer
 @synthesize scale = _scale;
 
-- (id)initWithScale:(float)scale {
+- (id)initWithScale:(NSSize)scale {
 	self = [super init];
 	if (self) {
 		rotation = 0;
 		colorChannel = 0;
 		self.scale = scale;
 		
-		atmosphere_init(&uistate);
-		
 		terrain = [[TPTerrain alloc] initWithHeightmap:@"heightmap.png"];
+		
+		camera = at_create_camera(at_create_vertex(0, 0, 0), ATZeroRotation);
+		
+		hasRun = NO;
 	}
 	
 	return self;
@@ -34,13 +36,16 @@
 
 - (void)draw {
 	
-	gluLookAt(1500, 1000, 0, 0, 0, 0, 0, 1, 0);
-	//gluLookAt(0, 0, 0, 0, 0, -6, 0, 1, 0);
-	//glTranslatef(0, 0, -6);
+	if (hasRun == NO) {
+		
+		hasRun = YES;
+	}
+	
+	
+	
+	at_set_camera(camera);
 	
 	glPushMatrix();
-	
-	//glRotatef(rotation, 0, 1, 0);
 	
 	rotation++;
 	
@@ -53,56 +58,31 @@
 	TPAxis *zAxis = [[TPAxis alloc] initWithAxisType:TPAxisTypeZ axisLength:1000];
 	[zAxis draw];
 	
-	[terrain drawFromPoint:NSZeroPoint];
+	NSPoint cameraLoc = NSMakePoint(camera.location.x, camera.location.z);
+	
+	[terrain drawFromPoint:cameraLoc];
 	
 	glPopMatrix();
 	
 	//UI
 	
-	glPushMatrix();
+	atmosphere_ortho_start(0, self.scale.width, 0, self.scale.height, 0, 10);
 	
-	glMatrixMode(GL_PROJECTION);
-	glPushMatrix();
-	glLoadIdentity();
-	glOrtho(0, self.scale * 2, 0, self.scale * 2, -1, 1);
-	glMatrixMode(GL_MODELVIEW);
-	glPushMatrix();
-	glLoadIdentity();
+	TPChunk *chunk = [terrain.chunks objectAtIndices:0 y:5 sideLength:16];
 	
-	atmosphere_start(&uistate);
+	float distance = DistanceToPoint(cameraLoc, chunk.center);
 	
-	if (do_button(1, ATMakeRect(ATMakePoint(300, 10), ATMakeSize(90, 30)), &uistate)) {
-		[self changeColorChannel];
-	}
+	drawStringAtPoint([NSString stringWithFormat:@"dist to offending chunk: %f\n\nview size: %.0f, %.0f\n\ncamera:\n%s\n\n%d chunks", distance, self.scale.width, self.scale.height, at_string_camera(camera), terrain.chunks.count], nil, NSZeroPoint);
 	
-	atmosphere_finish(&uistate);
+	atmosphere_ortho_end();
 	
-	/*
-	glTranslatef(uistate->mousePoint->x, uistate->mousePoint->y, 0);
+	at_unset_camera();
 	
-	glBegin(GL_QUADS);
-	
-	glColor3f(1, 1, 1);
-	
-	glVertex3f(0, 0, 0);
-	glVertex3f(0, 32, 0);
-	glVertex3f(96, 32, 0);
-	glVertex3f(96, 0, 0);
-	
-	glEnd();
-	*/
-	
-	glMatrixMode(GL_PROJECTION);
-	glPopMatrix();
-	glMatrixMode(GL_MODELVIEW);
-	glPopMatrix();
-	
-	glPopMatrix();
-	
+	glClearColor(0, 0, 0, 0);
 }
 
 - (void)reshape:(NSSize)size {
-	//Resize UI elements
+	self.scale = size;
 }
 
 // Events -- Mouse
@@ -112,7 +92,7 @@
 }
 
 - (void)mouseDown:(NSPoint)point {
-	uistate.mouseDown = YES;
+	
 }
 
 - (void)rightMouseDown:(NSPoint)point {
@@ -120,7 +100,7 @@
 }
 
 - (void)mouseUp:(NSPoint)point {
-	uistate.mouseDown = NO;
+	
 }
 
 - (void)rightMouseUp:(NSPoint)point {
@@ -128,8 +108,7 @@
 }
 
 - (void)mouseMoved:(NSPoint)point {
-	ATPoint atPoint = ATMakePoint(point.x, point.y);
-	uistate.mousePoint = atPoint;
+	
 }
 
 - (void)mouseDragged:(NSPoint)point {
@@ -146,26 +125,74 @@
 
 // Events -- Keyboard
 
+#define PI_OVER_180 0.01745329251994
+
 - (void)keyDown:(NSEvent *)theEvent {
+	
+	//          d c = camera
+	//        / | d = destination
+	// dist /   | dist = distance to travel
+	//    / ang | ang = angle of c
+	//  / - |   |
+	// c--------a
+	
+	// i, j, k, l move according to world axes
+	
+	if ([theEvent.characters isEqualToString:@"I"]) {
+		camera.location.y += MOV_SPEED;
+	}
+	
+	if ([theEvent.characters isEqualToString:@"K"]) {
+		camera.location.y -= MOV_SPEED;
+	}
+	
+	if ([theEvent.characters isEqualToString:@"i"]) {
+		camera.location.z -= MOV_SPEED;
+	}
+	
+	if ([theEvent.characters isEqualToString:@"k"]) {
+		camera.location.z += MOV_SPEED;
+	}
+	
+	if ([theEvent.characters isEqualToString:@"j"]) {
+		camera.location.x -= MOV_SPEED;
+	}
+	
+	if ([theEvent.characters isEqualToString:@"l"]) {
+		camera.location.x += MOV_SPEED;
+	}
+	
+	if ([theEvent.characters isEqualToString:@"w"]) {
+		camera.location.x -= sinf(camera.rotation.y * PI_OVER_180) * MOV_SPEED;
+		camera.location.y += sinf(camera.rotation.x * PI_OVER_180) * MOV_SPEED;
+		camera.location.z -= cosf(camera.rotation.y * PI_OVER_180) * MOV_SPEED;
+	}
+	
+	if ([theEvent.characters isEqualToString:@"s"]) {
+		camera.location.x += sinf(camera.rotation.y * PI_OVER_180) * MOV_SPEED;
+		camera.location.y -= sinf(camera.rotation.x * PI_OVER_180) * MOV_SPEED;
+		camera.location.z += cosf(camera.rotation.y * PI_OVER_180) * MOV_SPEED;
+	}
+	
+	if ([theEvent.characters isEqualToString:@"a"]) {
+		camera.rotation.y += ROT_SPEED;
+	}
+	
+	if ([theEvent.characters isEqualToString:@"d"]) {
+		camera.rotation.y -= ROT_SPEED;
+	}
+	
+	if ([theEvent.characters isEqualToString:@"="]) {
+		camera.rotation.x += ROT_SPEED;
+	}
+	
+	if ([theEvent.characters isEqualToString:@"-"]) {
+		camera.rotation.x -= ROT_SPEED;
+	}
 	
 }
 
 - (void)keyUp:(NSEvent *)theEvent {
 	
 }
-
-- (void)runMe {
-	[self draw];
-}
-
-- (void)changeColorChannel {
-	colorChannel++;
-	if (colorChannel > 3) {
-		colorChannel = 0;
-	}
-	
-	terrain.colorChannel = colorChannel;
-	[terrain rebuildTerrain];
-}
-
 @end
