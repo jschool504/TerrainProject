@@ -7,7 +7,6 @@
 //
 
 #import "TPTerrainGenerator.h"
-#import "NSImage+Saving.h"
 #import <QuartzCore/QuartzCore.h>
 
 @implementation TPTerrainGenerator
@@ -26,23 +25,20 @@
 
 - (float)heightOfPoint:(NSPoint)point {
 	
-	float total = 0.0;
-	float frequency = ((sqrtf(self.size.width)) / 0.25) / self.size.height;
-	float persistence = 0.7;
-	float amplitude = persistence;
-	int topoOctaves = 2;
+	float total = getHeightAtPoint(point, 0.01, HILLINESS, self.size.height, self.seed);
 	
-	for (int i = 0; i < topoOctaves; i++) {
-		total += getHeightAtPoint(point, frequency, amplitude, self.size.height, self.seed) * amplitude;
-		frequency *= 2;
-		amplitude *= persistence;
+	float detailTotal = getHeightAtPoint(point, 0.2, ROCKINESS, self.size.height, self.seed);
+	/*
+	if (point.x == 25 && point.y == 25) {
+		NSLog(@"%f", total + detailTotal);
+		NSLog(@"%f", (total * HILLINESS) + (detailTotal * ROCKINESS));
 	}
-	
-	float detailTotal = getHeightAtPoint(point, (self.size.width / 2) / self.size.height, 0.5, self.size.height, self.seed);
-	
-	return (total * SMOOTHNESS) + (detailTotal * ROCKINESS);
+	*/
+	return total + detailTotal;
 	
 }
+
+// My understanding of the code is rather sketchy after this point
 
 float getHeightAtPoint(NSPoint point, float frequency, float amplitude, float height, float seed) {
 	return (smoothedNoise(point.x * frequency, point.y * frequency, height, seed)) * amplitude;
@@ -86,7 +82,7 @@ float cosine(float x1, float x2, float a) {
 	float temp;
 	temp = (1.0f - cosf(a * 3.1415927f)) / 2.0f;
 	
-	return ( x1 * (1.0f - temp) + x2 * temp);
+	return (x1 * (1.0f - temp) + x2 * temp);
 }
 /*
 - (NSBitmapImageRep *)noisemap {

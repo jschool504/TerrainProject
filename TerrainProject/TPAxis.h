@@ -9,13 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <OpenGL/gl.h>
 #import <OpenGL/glu.h>
-#import "TPShapeProtocol.h"
 
 #define TPAxisTypeX 0
 #define TPAxisTypeY 1
 #define TPAxisTypeZ 2
 
-@interface TPAxis : NSObject <TPShapeProtocol> {
+@interface TPAxis : NSObject {
 	
 }
 

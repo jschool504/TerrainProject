@@ -10,6 +10,7 @@
 
 @implementation NSImage (OpenGLTexture)
 
+// This basically creates an opengl texture when it's called. Very handy to be able to just convert NSImages into textures, although this does still need some additionaly stuff to make it really useful. Perhaps a subclass is in order?
 - (GLubyte *)glubyteValue {
 	
 	NSImage *image = [[NSImage alloc] initWithSize:self.size];

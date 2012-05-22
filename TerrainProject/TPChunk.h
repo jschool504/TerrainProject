@@ -11,6 +11,8 @@
 #import "TPTerrainGenerator.h"
 #import "NSArray+TwoD.h"
 
+#define DRAW_LINE YES
+
 @interface TPChunk : NSObject {
 	@private
 	float _privateSize;

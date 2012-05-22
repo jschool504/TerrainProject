@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+// This category let's me easily treat an NSArray as though it were two dimensional. Note: find out if I'm actually using this anywhere.
 @interface NSArray (TwoD)
 
 - (id)objectAtIndices:(NSUInteger)x y:(NSUInteger)y sideLength:(NSUInteger)l;

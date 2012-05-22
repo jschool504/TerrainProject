@@ -24,7 +24,7 @@
 		colorChannel = 0;
 		self.scale = scale;
 		
-		terrain = [[TPTerrain alloc] initWithHeightmap:@"heightmap.png"];
+		terrain = [[TPTerrain alloc] init];
 		
 		camera = at_create_camera(at_create_vertex(0, 0, 0), ATZeroRotation);
 		
@@ -68,11 +68,7 @@
 	
 	atmosphere_ortho_start(0, self.scale.width, 0, self.scale.height, 0, 10);
 	
-	TPChunk *chunk = [terrain.chunks objectAtIndices:0 y:5 sideLength:16];
-	
-	float distance = DistanceToPoint(cameraLoc, chunk.center);
-	
-	drawStringAtPoint([NSString stringWithFormat:@"dist to offending chunk: %f\n\nview size: %.0f, %.0f\n\ncamera:\n%s\n\n%d chunks", distance, self.scale.width, self.scale.height, at_string_camera(camera), terrain.chunks.count], nil, NSZeroPoint);
+	drawStringAtPoint([NSString stringWithFormat:@"view size: %.0f, %.0f\n\ncamera:\n%s", self.scale.width, self.scale.height, at_string_camera(camera)], nil, NSZeroPoint);
 	
 	atmosphere_ortho_end();
 	

@@ -7,7 +7,6 @@
 //
 
 #import "TPChunk.h"
-#import "NSImage+Saving.h"
 #include <OpenGL/OpenGL.h>
 #include <OpenGL/glu.h>
 #include <OpenGL/gl.h>
@@ -78,6 +77,7 @@
 
 - (void)draw {
 	
+	// This magical bit of code gives a random (but deterministic) color every time it's run. I use that ( see glcolor3f(r, g, b) )
 	srandom(self.location.x);
 	float r = random() % 10;
 	r = r / 10;
@@ -90,16 +90,19 @@
 	
 	glPushMatrix();
 	
-	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	if (DRAW_LINE == YES) {
+		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); // By using GL_FILL instead of GL_LINE, 
+	}
 	
 	for (int x = 0; x < _privateSize - 1; x++) {
 		
 		glBegin(GL_TRIANGLE_STRIP);
 		
-		glColor3f(r, g, b);
+		glColor3f(r, g, b); // down here, to make each chunk a different color
 		
 		for (int y = 0; y < _privateSize; y++) {
 			
+			// Ah, I thought I was using NSArray+TwoD somewhere. Now I know where.
 			JSVertex *vertex = [self.points objectAtIndices:x y:y sideLength:_privateSize];
 			JSVertex *vertex2 = [self.points objectAtIndices:x + 1 y:y sideLength:_privateSize];
 			

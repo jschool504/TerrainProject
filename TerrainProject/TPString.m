@@ -8,7 +8,6 @@
 
 #import "TPString.h"
 #import "NSImage+OpenGLTexture.h"
-#import "NSImage+Saving.h"
 
 @implementation TPString
 @synthesize string = _string, texture = _texture, attributes = _attributes;

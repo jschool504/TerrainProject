@@ -32,6 +32,16 @@ bool is_po2(int num) {
 	return true;
 }
 
+/* Converts each dimension into the next power of 2. Example:
+
+ width = 14
+ height = 25
+ 
+ Width will equal 16, height 32
+ 
+ The reason for this is that the dimensions of OpenGL textures must be a power of 2 (though they do not have to be the same). As such, I wanted a convient function to convert ATSizes to texture compatible sizes.
+ 
+*/
 ATSize at_convert_to_po2(ATSize size) {
 	
 	int width = (int)size.width;

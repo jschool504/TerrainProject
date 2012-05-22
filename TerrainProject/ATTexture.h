@@ -19,7 +19,7 @@
 
 typedef struct {
 	
-	GLuint id;
+	GLuint id; // OpenGL will store all the texture pixels and stuff. All we need is a number referencing the texture.
 	
 	ATPoint origin;
 	ATSize size;

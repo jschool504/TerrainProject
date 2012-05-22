@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "NSImage+OpenGLTexture.h"
-#import "NSImage+Saving.h"
 #import "TPAxis.h"
 #import "TPTerrain.h"
 #import "TPOpenGLView.h"
@@ -19,7 +18,8 @@
 #include <OpenGL/glu.h>
 #include <OpenGL/gl.h>
 
-#define MOV_SPEED 5
+// Do these even need explaining?
+#define MOV_SPEED 5 // meters
 #define ROT_SPEED 3
 
 @interface TPSceneRenderer : NSObject <OpenGLSceneRenderer> {

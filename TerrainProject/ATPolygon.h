@@ -19,7 +19,7 @@ typedef struct {
 	int num_vertices; // Number of verts in the array
 	
 	ATPoint *points; // Array of vertices. Be careful of the order in which you put them in, because that's the order they'll be drawn in
-	ATColor *colors; // You'll need to match up each color with each vertex (i.e., color1is at the same index vertex2 is at)
+	ATColor *colors; // You'll need to match up each color with each vertex (i.e., color1 is at the same index vertex2 is at)
 	
 } ATPolygon;
 

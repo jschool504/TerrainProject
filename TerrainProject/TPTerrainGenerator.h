@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-#define ROCKINESS 2 // Will be determined per region eventually
-#define SMOOTHNESS 10 // Will be determined per region eventually
+#define ROCKINESS 1 // Will be determined per region eventually
+#define HILLINESS 300 // Will be determined per region eventually
 
 @interface TPTerrainGenerator : NSObject {
 	float min;
