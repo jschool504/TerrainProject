@@ -36,6 +36,7 @@
 		3F980AC6154A3823005EDE60 /* TPChunk.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F980AC5154A3822005EDE60 /* TPChunk.m */; };
 		3F980AD9154AFB2A005EDE60 /* JSVertex.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F980AD8154AFB29005EDE60 /* JSVertex.m */; };
 		3FAE6A8E15688E4E00917C65 /* TPTerrainGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE6A8D15688E4E00917C65 /* TPTerrainGenerator.m */; };
+		3FEDBDBD156D906500CBAD38 /* ATFog.c in Sources */ = {isa = PBXBuildFile; fileRef = 3FEDBDBC156D906500CBAD38 /* ATFog.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,8 @@
 		3FAE6A8C15688E4E00917C65 /* TPTerrainGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPTerrainGenerator.h; sourceTree = "<group>"; };
 		3FAE6A8D15688E4E00917C65 /* TPTerrainGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPTerrainGenerator.m; sourceTree = "<group>"; };
 		3FE7AFAA1551C8AB00363533 /* Atmosphere.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Atmosphere.h; sourceTree = "<group>"; };
+		3FEDBDBA156D905B00CBAD38 /* ATFog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATFog.h; sourceTree = "<group>"; };
+		3FEDBDBC156D906500CBAD38 /* ATFog.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ATFog.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +226,8 @@
 				3F962E6B155C1ECB00090190 /* ATRotation.c */,
 				3F962E70155CB23F00090190 /* ATVector.h */,
 				3F962E71155CB24A00090190 /* ATVector.c */,
+				3FEDBDBA156D905B00CBAD38 /* ATFog.h */,
+				3FEDBDBC156D906500CBAD38 /* ATFog.c */,
 			);
 			name = Atmosphere;
 			sourceTree = "<group>";
@@ -315,6 +320,7 @@
 				3F962E72155CB24B00090190 /* ATVector.c in Sources */,
 				3F36920B1563EE79007DBD4F /* NSArray+TwoD.m in Sources */,
 				3FAE6A8E15688E4E00917C65 /* TPTerrainGenerator.m in Sources */,
+				3FEDBDBD156D906500CBAD38 /* ATFog.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

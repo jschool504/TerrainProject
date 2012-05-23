@@ -12,7 +12,20 @@
 #import "NSArray+TwoD.h"
 
 #define DRAW_LINE NO
-#define LIGHTNING_SOFTNESS 5
+
+#define LIGHTNING_SOFTNESS 1
+
+#define MAX_LIGHT 0.9
+#define MIN_LIGHT 0.01
+
+// degrees
+#define MAX_GRASS_SLOPE 0.5
+#define MAX_DIRT_SLOPE 0.8
+#define MAX_ROCK_SLOPE 5.0
+
+// meters
+#define WATER_LEVEL 300
+#define SNOW_LEVEL 500
 
 @interface TPChunk : NSObject {
 	@private
@@ -29,5 +42,7 @@
 
 - (id)initWithLocation:(NSPoint)location mapSize:(int)mapSize withSeed:(int)seed;
 - (void)draw;
+
+int compare_elements(const void *a, const void *b);
 
 @end

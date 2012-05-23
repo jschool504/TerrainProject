@@ -25,9 +25,9 @@
 
 - (float)heightOfPoint:(NSPoint)point {
 	
-	float total = getHeightAtPoint(point, 0.01, HILLINESS, self.size.height, self.seed);
+	float total = getHeightAtPoint(point, 0.008, HILLINESS, self.size.height, self.seed);
 	
-	float detailTotal = getHeightAtPoint(point, 0.2, ROCKINESS, self.size.height, self.seed);
+	float detailTotal = getHeightAtPoint(point, 0.3, ROCKINESS, self.size.height, self.seed);
 	/*
 	if (point.x == 25 && point.y == 25) {
 		NSLog(@"%f", total + detailTotal);

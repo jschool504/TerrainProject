@@ -26,7 +26,8 @@
 		
 		terrain = [[TPTerrain alloc] init];
 		
-		camera = at_create_camera(at_create_vertex(300, 300, 300), at_create_rotation(-20, 0, 0));
+		camera = at_create_camera(at_create_vertex(300, 100, 300), at_create_rotation(0, 0, 0));
+		fog = at_create_fog(VIEW_RANGE, VIEW_RANGE * 2, 0.01, at_create_color(SKY_COLOR.redComponent, SKY_COLOR.greenComponent, SKY_COLOR.blueComponent), GL_EXP2, GL_NICEST);
 		
 		hasRun = NO;
 	}
@@ -38,10 +39,10 @@
 	
 	if (hasRun == NO) {
 		
+		//at_set_fog(fog);
+		
 		hasRun = YES;
 	}
-	
-	
 	
 	at_set_camera(camera);
 	
@@ -74,7 +75,7 @@
 	
 	at_unset_camera();
 	
-	glClearColor(0, 0, 0, 0);
+	glClearColor(SKY_COLOR.redComponent, SKY_COLOR.greenComponent, SKY_COLOR.blueComponent, SKY_COLOR.alphaComponent);
 }
 
 - (void)reshape:(NSSize)size {

@@ -17,7 +17,7 @@
 
 // In meters
 #define MAP_SIZE 10000
-#define CHUNK_SIZE 25
+#define CHUNK_SIZE 50
 #define VIEW_RANGE 150
 
 #define Square(num) ((num) * (num))

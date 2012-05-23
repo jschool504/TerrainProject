@@ -11,6 +11,8 @@
 #include <OpenGL/glu.h>
 #include <OpenGL/gl.h>
 
+#define SKY_COLOR [NSColor colorWithCalibratedRed:0.3 green:0.3 blue:0.9 alpha:1.0]
+
 @protocol OpenGLSceneRenderer <NSObject>
 
 // Drawing

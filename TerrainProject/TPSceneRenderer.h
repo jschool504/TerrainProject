@@ -34,7 +34,7 @@
 	TPString *terrainPointsString;
 	
 	ATCamera camera;
-	ATVertex camLoc;
+	ATFog fog;
 	
 	BOOL hasRun;
 }

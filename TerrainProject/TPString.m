@@ -23,6 +23,8 @@
 
 - (void)drawInGLViewAtPoint:(NSPoint)point {
 	
+	glCullFace(GL_FRONT);
+	
 	ATPoint *points = malloc(sizeof(ATPoint) * 4);
 	points[0] = at_create_point(point.x, point.y);
 	points[1] = at_create_point(point.x, point.y + self.size.height);
@@ -40,6 +42,8 @@
 	at_draw_textured_polygon(polygon, GL_TRIANGLE_STRIP);
 	
 	at_destroy_texture(self.texture);
+	
+	glCullFace(GL_BACK);
 }
 
 void drawStringAtPoint(NSString *string, NSColor *color, NSPoint point) {

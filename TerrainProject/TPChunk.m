@@ -46,8 +46,56 @@
 				NSPoint point = NSMakePoint(x, y);
 				JSVertex *vertex = [[JSVertex alloc] initWithLocation:point.x y:[self heightAtPoint:point] z:point.y];
 				
-				// I <3 slope lighting :-)
-				vertex.light = 1 - ([self heightAtPoint:NSMakePoint(point.x, point.y - 1)] - vertex.y) / LIGHTNING_SOFTNESS;
+				/*
+				       4
+				       |
+				   1---0---3
+				       |
+				       2
+				 */
+				
+				float localHeights[5] = {
+					vertex.y,
+					[self heightAtPoint:NSMakePoint(vertex.x - 1, vertex.z)],
+					[self heightAtPoint:NSMakePoint(vertex.x, vertex.z - 1)],
+					[self heightAtPoint:NSMakePoint(vertex.x + 1, vertex.z)],
+					[self heightAtPoint:NSMakePoint(vertex.x, vertex.z + 1)]};
+				
+				// I <3 sloped lighting :-)
+				float lightSlope = 1 - (localHeights[1] - localHeights[0]) / LIGHTNING_SOFTNESS;
+				
+				if (lightSlope > MAX_LIGHT) {
+					lightSlope = MAX_LIGHT;
+				}
+				
+				if (lightSlope < MIN_LIGHT) {
+					lightSlope = MIN_LIGHT;
+				}
+				
+				vertex.light = lightSlope;
+				
+				qsort(localHeights, 5, sizeof(float), compare_elements); // I don't think I've ever used a C function pointer before this moment
+				
+				float slope = localHeights[4] - localHeights[0]; // Subtract the highest value from the lowest and use that to color the terrain
+				
+				float rVal = rand() % 10;
+				rVal = rVal / 200;
+				
+				if (slope < MAX_GRASS_SLOPE) {
+					JSColor color = {0.0, 0.5 + rVal, 0.0};
+					vertex.color = color;
+				} else if (slope < MAX_DIRT_SLOPE) {
+					JSColor color = {0.5 + rVal, 0.25 + rVal, 0.025 + rVal};
+					vertex.color = color;
+				} else if (slope < MAX_ROCK_SLOPE) {
+					JSColor color = {0.5 + rVal, 0.5 + rVal, 0.5 + rVal};
+					vertex.color = color;
+				} else {
+					JSColor color = {1.0, 0.0, 1.0};
+					vertex.color = color;
+				}
+				
+				//NSLog(@"%f", vertex.light);
 				
 				[tempPoints addObject:vertex];
 				
@@ -55,20 +103,6 @@
 		}
 		
 		_points = [tempPoints copy];
-		/*
-		int index = -1;
-		for (JSVertex *vertex in _points) {
-			
-			if (index > -1) { // Do lighting calculations
-				JSVertex *lastVertex = [_points objectAtIndex:index];
-				
-				vertex.light = 1 - (lastVertex.y - vertex.y) / LIGHTNING_SOFTNESS;
-				//NSLog(@"%f, %f", lastVertex.y, vertex.y);
-			}
-			
-			index++;
-		}
-		*/
 	}
 	
 	return _points;
@@ -123,9 +157,10 @@
 			JSVertex *vertex = [self.points objectAtIndices:x y:y sideLength:_privateSize];
 			JSVertex *vertex2 = [self.points objectAtIndices:x + 1 y:y sideLength:_privateSize];
 			
-			glColor3f(vertex.light, vertex.light, vertex.light);
+			glColor3f(vertex.color.r * vertex.light, vertex.color.g * vertex.light, vertex.color.b * vertex.light);
 			[vertex drawVertex];
-			glColor3f(vertex.light, vertex.light, vertex.light);
+			
+			glColor3f(vertex2.color.r * vertex2.light, vertex2.color.g * vertex2.light, vertex2.color.b * vertex2.light);
 			[vertex2 drawVertex];
 			
 		}
@@ -136,6 +171,15 @@
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 	
 	glPopMatrix();
+}
+
+int compare_elements(const void *a, const void *b) {
+	
+	const float *ia = (const float *)a;
+	const float *ib = (const float *)b;
+	
+	return *ia - *ib;
+	
 }
 
 @end

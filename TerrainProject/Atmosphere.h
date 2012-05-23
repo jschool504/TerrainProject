@@ -14,3 +14,4 @@
 #include "ATTexturedPolygon.h"
 #include "AtmosphereProjection.h"
 #include "ATCamera.h"
+#include "ATFog.h"

@@ -75,7 +75,7 @@
 
 - (void)initGL {
 	
-	glClearColor(0.0, 0.0, 0.0, 0.0);
+	glClearColor(SKY_COLOR.redComponent, SKY_COLOR.greenComponent, SKY_COLOR.blueComponent, SKY_COLOR.alphaComponent);
 	glClearDepth(1.0);
 	
 	glDepthFunc(GL_LESS);
@@ -85,6 +85,7 @@
 	
 	glHint(GL_POLYGON_SMOOTH, GL_NICEST);
 	
+	glEnable(GL_CULL_FACE);
 }
 
 - (void)drawRect:(NSRect)dirtyRect {
