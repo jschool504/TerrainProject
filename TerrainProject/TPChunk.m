@@ -45,13 +45,30 @@
 				
 				NSPoint point = NSMakePoint(x, y);
 				JSVertex *vertex = [[JSVertex alloc] initWithLocation:point.x y:[self heightAtPoint:point] z:point.y];
+				
+				// I <3 slope lighting :-)
+				vertex.light = 1 - ([self heightAtPoint:NSMakePoint(point.x, point.y - 1)] - vertex.y) / LIGHTNING_SOFTNESS;
+				
 				[tempPoints addObject:vertex];
 				
 			}
 		}
 		
 		_points = [tempPoints copy];
-		
+		/*
+		int index = -1;
+		for (JSVertex *vertex in _points) {
+			
+			if (index > -1) { // Do lighting calculations
+				JSVertex *lastVertex = [_points objectAtIndex:index];
+				
+				vertex.light = 1 - (lastVertex.y - vertex.y) / LIGHTNING_SOFTNESS;
+				//NSLog(@"%f, %f", lastVertex.y, vertex.y);
+			}
+			
+			index++;
+		}
+		*/
 	}
 	
 	return _points;
@@ -91,14 +108,14 @@
 	glPushMatrix();
 	
 	if (DRAW_LINE == YES) {
-		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); // By using GL_FILL instead of GL_LINE, 
+		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); // By using GL_FILL instead of GL_LINE, one can toggle the lovely wireframe mode on and off.
 	}
 	
 	for (int x = 0; x < _privateSize - 1; x++) {
 		
 		glBegin(GL_TRIANGLE_STRIP);
 		
-		glColor3f(r, g, b); // down here, to make each chunk a different color
+		//glColor3f(r, g, b); // down here, to make each chunk a different color
 		
 		for (int y = 0; y < _privateSize; y++) {
 			
@@ -106,7 +123,9 @@
 			JSVertex *vertex = [self.points objectAtIndices:x y:y sideLength:_privateSize];
 			JSVertex *vertex2 = [self.points objectAtIndices:x + 1 y:y sideLength:_privateSize];
 			
+			glColor3f(vertex.light, vertex.light, vertex.light);
 			[vertex drawVertex];
+			glColor3f(vertex.light, vertex.light, vertex.light);
 			[vertex2 drawVertex];
 			
 		}

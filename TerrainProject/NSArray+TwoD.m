@@ -17,3 +17,13 @@
 }
 
 @end
+
+@implementation NSMutableArray (TwoD)
+
+- (id)objectAtIndices:(NSUInteger)x y:(NSUInteger)y sideLength:(NSUInteger)l {
+	
+	return [self objectAtIndex:x + (y * l)];
+	
+}
+
+@end

@@ -14,3 +14,9 @@
 - (id)objectAtIndices:(NSUInteger)x y:(NSUInteger)y sideLength:(NSUInteger)l;
 
 @end
+
+@interface NSMutableArray (TwoD)
+
+- (id)objectAtIndices:(NSUInteger)x y:(NSUInteger)y sideLength:(NSUInteger)l;
+
+@end

@@ -77,9 +77,12 @@
 	
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 	glClearDepth(1.0);
+	
 	glDepthFunc(GL_LESS);
 	glEnable(GL_DEPTH_TEST);
+	
 	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
+	
 	glHint(GL_POLYGON_SMOOTH, GL_NICEST);
 	
 }

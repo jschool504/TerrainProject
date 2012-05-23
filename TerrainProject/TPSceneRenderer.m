@@ -26,7 +26,7 @@
 		
 		terrain = [[TPTerrain alloc] init];
 		
-		camera = at_create_camera(at_create_vertex(0, 0, 0), ATZeroRotation);
+		camera = at_create_camera(at_create_vertex(300, 300, 300), at_create_rotation(-20, 0, 0));
 		
 		hasRun = NO;
 	}

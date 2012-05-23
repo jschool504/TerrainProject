@@ -10,7 +10,8 @@
 
 @implementation JSVertex
 
-@synthesize x, y, z, nx, ny, nz, color, tx, ty;
+@synthesize x, y, z, color, tx, ty;
+@synthesize light = _light;
 @synthesize texId = _texId;
 
 //Init methods
@@ -38,7 +39,7 @@
 	
 	return self;
 }
-
+/*
 - (id)initWithLocation:(float)xLoc y:(float)yLoc z:(float)zLoc andNormalX:(float)normalX normalY:(float)normalY normalZ:(float)normalZ {
 	self = [super init];
 	if (self) {
@@ -53,7 +54,7 @@
 	
 	return self;
 }
-
+*/
 - (id)initWithLocation:(float)xLoc y:(float)yLoc z:(float)zLoc andTextureCoordinates:(float)textureX textureCoordY:(float)textureY {
 	self = [super init];
 	if (self) {
@@ -67,7 +68,7 @@
 	
 	return self;
 }
-
+/*
 - (id)initWithLocation:(float)xLoc y:(float)yLoc z:(float)zLoc andColor:(JSColor)newColor andNormalX:(float)normalX normalY:(float)normalY normalZ:(float)normalZ andTextureCoordinates:(float)textureX textureCoordY:(float)textureY {
 	self = [super init];
 	if (self) {
@@ -87,7 +88,7 @@
 	
 	return self;
 }
-
+*/
 //End of Init methods
 
 //Log the vertex coords

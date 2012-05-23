@@ -33,10 +33,8 @@
 @property (nonatomic, readwrite) float y;
 @property (nonatomic, readwrite) float z;
 
-//Normal
-@property (nonatomic, readwrite) float nx;
-@property (nonatomic, readwrite) float ny;
-@property (nonatomic, readwrite) float nz;
+//Lighting (Slope)
+@property (nonatomic, readwrite) float light;
 
 //Color
 @property (nonatomic, readwrite) JSColor color;

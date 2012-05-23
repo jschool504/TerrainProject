@@ -11,7 +11,8 @@
 #import "TPTerrainGenerator.h"
 #import "NSArray+TwoD.h"
 
-#define DRAW_LINE YES
+#define DRAW_LINE NO
+#define LIGHTNING_SOFTNESS 5
 
 @interface TPChunk : NSObject {
 	@private
