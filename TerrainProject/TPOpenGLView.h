@@ -47,4 +47,7 @@
 
 - (id)initWithFrame:(NSRect)frame delegate:(id<OpenGLSceneRenderer>)delegate;
 
+- (NSOpenGLPixelFormat *)createPixelFormat:(NSRect)frame;
+- (void)initGL;
+
 @end

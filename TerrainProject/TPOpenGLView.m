@@ -20,7 +20,6 @@
 		self = [super initWithFrame:frame pixelFormat:pixelFormat];
 		if (self) {
 			[[self openGLContext] makeCurrentContext];
-			
 			startingSize = self.frame.size;
 			
 			[self.window setAcceptsMouseMovedEvents:YES];
@@ -28,7 +27,7 @@
 			self.delegate = delegate;
 			[self initGL];
 			
-			timer = [NSTimer scheduledTimerWithTimeInterval:0.001 target:self selector:@selector(drawRect:) userInfo:nil repeats:YES];
+			timer = [NSTimer scheduledTimerWithTimeInterval:0.000001 target:self selector:@selector(drawRect:) userInfo:nil repeats:YES];
 		}
 	}
 	

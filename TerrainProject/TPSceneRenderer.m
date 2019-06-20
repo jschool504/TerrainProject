@@ -7,6 +7,7 @@
 //
 
 #import "TPSceneRenderer.h"
+#include <stdio.h>
 
 @interface TPSceneRenderer(InternalMethods)
 
@@ -27,7 +28,9 @@
 		terrain = [[TPTerrain alloc] init];
 		
 		camera = at_create_camera(at_create_vertex(300, 100, 300), at_create_rotation(0, 0, 0));
-		fog = at_create_fog(VIEW_RANGE, VIEW_RANGE * 2, 0.01, at_create_color(SKY_COLOR.redComponent, SKY_COLOR.greenComponent, SKY_COLOR.blueComponent), GL_EXP2, GL_NICEST);
+		fog = at_create_fog(VIEW_RANGE, VIEW_RANGE * 2, 0.01, at_create_color(SKY_COLOR.redComponent, SKY_COLOR.greenComponent, SKY_COLOR.blueComponent, SKY_COLOR.alphaComponent), GL_EXP2, GL_NICEST);
+		
+		
 		
 		hasRun = NO;
 	}
@@ -40,9 +43,33 @@
 	if (hasRun == NO) {
 		
 		//at_set_fog(fog);
+		ATBitmap bmImage = at_load_bitmap((char *)[[[NSBundle mainBundle] pathForResource:@"Font" ofType:@"bmp"] cStringUsingEncoding:NSUTF8StringEncoding]);
+		
+		ATTexture texture = at_create_texture(bmImage.data, GL_RGB, ATOriginPoint, ATZeroSize, NO);
+		
+		ATPoint points[4];
+		
+		points[0] = at_create_point(0, 0);
+		points[1] = at_create_point(0, texture.size.height);
+		points[2] = at_create_point(texture.size.width, 0);
+		points[3] = at_create_point(texture.size.width, texture.size.height);
+		
+		ATPoint texPoints[4];
+		
+		texPoints[0] = at_create_point(0, 0);
+		texPoints[1] = at_create_point(0, 1);
+		texPoints[2] = at_create_point(1, 0);
+		texPoints[3] = at_create_point(1, 1);
+		
+		testPoly = at_create_textured_polygon(ATOriginPoint, 4, points, texture, texPoints);
 		
 		hasRun = YES;
 	}
+	
+	newTime = clock();
+	float fps = difftime(newTime, oldTime);
+	fps = (1.0 / fps) * 10000000;
+	oldTime = newTime;
 	
 	at_set_camera(camera);
 	
@@ -69,7 +96,9 @@
 	
 	atmosphere_ortho_start(0, self.scale.width, 0, self.scale.height, 0, 10);
 	
-	drawStringAtPoint([NSString stringWithFormat:@"view size: %.0f, %.0f\n\ncamera:\n%s", self.scale.width, self.scale.height, at_string_camera(camera)], nil, NSZeroPoint);
+	drawStringAtPoint([NSString stringWithFormat:@"fps: %.0f\n\nview size: %.0f, %.0f\n\ncamera:\n%s", fps, self.scale.width, self.scale.height, at_string_camera(camera)], nil, NSZeroPoint);
+	
+	//at_draw_textured_polygon(testPoly, <#int drawMode#>)
 	
 	atmosphere_ortho_end();
 	

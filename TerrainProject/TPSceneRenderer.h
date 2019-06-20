@@ -18,6 +18,8 @@
 #include <OpenGL/glu.h>
 #include <OpenGL/gl.h>
 
+#include <time.h>
+
 // Do these even need explaining?
 #define MOV_SPEED 5 // meters
 #define ROT_SPEED 3
@@ -29,12 +31,16 @@
 	
 	TPTerrain *terrain;
 	
-	ATTexturedPolygon polygon;
+	ATTexturedPolygon testPoly;
+	ATTexture texture;
 	
 	TPString *terrainPointsString;
 	
 	ATCamera camera;
 	ATFog fog;
+	
+	clock_t newTime;
+	clock_t oldTime;
 	
 	BOOL hasRun;
 }

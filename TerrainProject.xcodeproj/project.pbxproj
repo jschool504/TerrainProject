@@ -37,6 +37,8 @@
 		3F980AD9154AFB2A005EDE60 /* JSVertex.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F980AD8154AFB29005EDE60 /* JSVertex.m */; };
 		3FAE6A8E15688E4E00917C65 /* TPTerrainGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE6A8D15688E4E00917C65 /* TPTerrainGenerator.m */; };
 		3FEDBDBD156D906500CBAD38 /* ATFog.c in Sources */ = {isa = PBXBuildFile; fileRef = 3FEDBDBC156D906500CBAD38 /* ATFog.c */; };
+		3FEDBDBF156E6D4C00CBAD38 /* Font.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 3FEDBDBE156E6D4B00CBAD38 /* Font.bmp */; };
+		3FEDBDC2156E72EB00CBAD38 /* ATImage.c in Sources */ = {isa = PBXBuildFile; fileRef = 3FEDBDC1156E72EA00CBAD38 /* ATImage.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +103,9 @@
 		3FE7AFAA1551C8AB00363533 /* Atmosphere.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Atmosphere.h; sourceTree = "<group>"; };
 		3FEDBDBA156D905B00CBAD38 /* ATFog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATFog.h; sourceTree = "<group>"; };
 		3FEDBDBC156D906500CBAD38 /* ATFog.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ATFog.c; sourceTree = "<group>"; };
+		3FEDBDBE156E6D4B00CBAD38 /* Font.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = Font.bmp; sourceTree = "<group>"; };
+		3FEDBDC0156E6FB000CBAD38 /* ATImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATImage.h; sourceTree = "<group>"; };
+		3FEDBDC1156E72EA00CBAD38 /* ATImage.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ATImage.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +208,7 @@
 		3FE7AFAB1551C8B000363533 /* Atmosphere */ = {
 			isa = PBXGroup;
 			children = (
+				3FEDBDBE156E6D4B00CBAD38 /* Font.bmp */,
 				3FE7AFAA1551C8AB00363533 /* Atmosphere.h */,
 				3F2C91E215543960001CEB81 /* AtmosphereProjection.h */,
 				3F0C1F7C1552D9CD0091CFB7 /* AtmosphereProjection.c */,
@@ -228,6 +234,8 @@
 				3F962E71155CB24A00090190 /* ATVector.c */,
 				3FEDBDBA156D905B00CBAD38 /* ATFog.h */,
 				3FEDBDBC156D906500CBAD38 /* ATFog.c */,
+				3FEDBDC0156E6FB000CBAD38 /* ATImage.h */,
+				3FEDBDC1156E72EA00CBAD38 /* ATImage.c */,
 			);
 			name = Atmosphere;
 			sourceTree = "<group>";
@@ -287,6 +295,7 @@
 				3F098FC215486B420072E4B8 /* InfoPlist.strings in Resources */,
 				3F098FC815486B420072E4B8 /* Credits.rtf in Resources */,
 				3F098FCE15486B430072E4B8 /* MainMenu.xib in Resources */,
+				3FEDBDBF156E6D4C00CBAD38 /* Font.bmp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +330,7 @@
 				3F36920B1563EE79007DBD4F /* NSArray+TwoD.m in Sources */,
 				3FAE6A8E15688E4E00917C65 /* TPTerrainGenerator.m in Sources */,
 				3FEDBDBD156D906500CBAD38 /* ATFog.c in Sources */,
+				3FEDBDC2156E72EB00CBAD38 /* ATImage.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

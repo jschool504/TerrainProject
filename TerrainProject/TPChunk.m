@@ -37,7 +37,11 @@
 }
 
 - (NSArray *)points {
+	
 	if (!_points) {
+		
+		
+		
 		NSMutableArray *tempPoints = [[NSMutableArray alloc] init];
 		
 		for (int x = self.location.x; x < self.location.x + _privateSize; x++) {
@@ -74,7 +78,7 @@
 				
 				vertex.light = lightSlope;
 				
-				qsort(localHeights, 5, sizeof(float), compare_elements); // I don't think I've ever used a C function pointer before this moment
+				qsort(localHeights, 5, sizeof(float), compare_elements);
 				
 				float slope = localHeights[4] - localHeights[0]; // Subtract the highest value from the lowest and use that to color the terrain
 				
@@ -144,6 +148,14 @@
 	if (DRAW_LINE == YES) {
 		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); // By using GL_FILL instead of GL_LINE, one can toggle the lovely wireframe mode on and off.
 	}
+	
+	/*
+	clock_t startTime = clock();
+	clock_t endTime = clock();
+	float dTime = difftime(endTime, startTime);
+	
+	NSLog(@"%f", dTime / 1000);
+	*/
 	
 	for (int x = 0; x < _privateSize - 1; x++) {
 		

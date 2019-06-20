@@ -9,6 +9,7 @@
 #import "TPTerrain.h"
 #import "NSImage+OpenGLTexture.h"
 #import <QuartzCore/QuartzCore.h>
+#include <time.h>
 
 @implementation TPTerrain
 @synthesize chunks = _chunks;
@@ -42,15 +43,26 @@
 
 - (void)drawFromPoint:(NSPoint)point {
 	
+	
+	
 	for (TPChunk *chunk in self.chunks) {
 		
 		float distance = DistanceToPoint(point, chunk.center);
 		
 		if (distance <= VIEW_RANGE) {
+			clock_t startTime = clock();
 			[chunk draw];
+			clock_t endTime = clock();
+			float dTime = difftime(endTime, startTime) / 1000;
+	
+			printf("%f\n", dTime / CLOCKS_PER_SEC);
 		}
 		
+		
 	}
+	
+	
+	
 }
 
 @end

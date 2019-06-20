@@ -10,14 +10,14 @@
 #include <stdlib.h>
 #include "ATColor.h"
 
-ATColor at_create_color(float red, float green, float blue) {
-	ATColor color = {red, green, blue};
+ATColor at_create_color(float red, float green, float blue, float alpha) {
+	ATColor color = {red, green, blue, alpha};
 	return color;
 }
 
 char * at_string_color(ATColor color) {
 	char *output = malloc(sizeof(char) * 100);
-	sprintf(output, "Color: (R: %f G: %f B: %f)", color.r, color.g, color.b);
+	sprintf(output, "Color: (R: %f G: %f B: %f A: %f)", color.r, color.g, color.b, color.a);
 	return output;
 }
 

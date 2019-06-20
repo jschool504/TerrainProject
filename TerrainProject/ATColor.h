@@ -23,11 +23,13 @@ typedef struct {
 	float g;
 	float b;
 	
+	float a;
+	
 } ATColor;
 
 #endif
 
-ATColor at_create_color(float red, float green, float blue);
+ATColor at_create_color(float red, float green, float blue, float alpha);
 
 char * at_string_color(ATColor color);
 

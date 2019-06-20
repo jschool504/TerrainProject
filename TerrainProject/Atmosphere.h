@@ -15,3 +15,4 @@
 #include "AtmosphereProjection.h"
 #include "ATCamera.h"
 #include "ATFog.h"
+#include "ATImage.h"
